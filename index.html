@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>For You ❤️</title>
+  <style>
+    body {
+      background-color: #ffe6eb;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 100px;
+    }
+
+    h1 {
+      color: #c9184a;
+      font-size: 36px;
+    }
+
+    .buttons {
+      margin-top: 40px;
+      position: relative;
+      height: 200px;
+    }
+
+    button {
+      padding: 15px 30px;
+      font-size: 18px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+
+    #yesBtn {
+      background-color: #ff4d6d;
+      color: white;
+    }
+
+    #noBtn {
+      background-color: #adb5bd;
+      color: white;
+      position: absolute;
+    }
+
+    /* POPUP STYLE */
+    .popup {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.4);
+    }
+
+    .popup-content {
+      background: white;
+      width: 320px;
+      margin: 15% auto;
+      padding: 25px;
+      border-radius: 15px;
+      text-align: center;
+    }
+
+    .popup-content h2 {
+      color: #c9184a;
+    }
+
+    .close {
+      margin-top: 15px;
+      background-color: #ff4d6d;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Can you forgive me? 🥺❤️</h1>
+
+  <div class="buttons">
+    <button id="yesBtn" onclick="showPopup()">Yes 💕</button>
+    <button id="noBtn" onmouseover="moveNo()">No 😤</button>
+  </div>
+
+  <!-- POPUP -->
+  <div class="popup" id="popup">
+    <div class="popup-content">
+      <h2>I’m Sorry 🥹</h2>
+      <p>
+        I love you somuch baby, I know mahal na maraming akong pag kakamali sa'yo
+        I hope u can forgive me babyyy ko. lablaaaaaaab alwaysssss.
+        .
+      </p>
+      <button class="close" onclick="closePopup()">Okay ❤️</button>
+    </div>
+  </div>
+
+  <script>
+    function showPopup() {
+      document.getElementById("popup").style.display = "block";
+    }
+
+    function closePopup() {
+      document.getElementById("popup").style.display = "none";
+    }
+
+    function moveNo() {
+      const noBtn = document.getElementById("noBtn");
+      const x = Math.random() * 300;
+      const y = Math.random() * 150;
+      noBtn.style.left = x + "px";
+      noBtn.style.top = y + "px";
+    }
+  </script>
+
+</body>
+</html>
